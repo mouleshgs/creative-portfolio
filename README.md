@@ -2,6 +2,9 @@
 
 Welcome to my Creative Portfolio! This project showcases my work, including web development and design projects. It includes interactive animations powered by [Anime.js](https://animejs.com/) and scroll-based animations using [AOS](https://michalsnik.github.io/aos/).
 
+![image](https://github.com/user-attachments/assets/32ed05ae-d9ac-42bd-bd08-346d0c481161)
+
+
 ## Features
 
 - **Responsive Design**: Clean, modern, and responsive layout to display my work.
