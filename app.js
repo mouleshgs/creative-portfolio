@@ -11,9 +11,10 @@ import anime from '/node_modules/animejs/lib/anime.es.js';
 // }); 
 
 
-let name = document.getElementById("my-name");
-let namemoulesh = document.querySelector(".namemoulesh");
-let blob = document.querySelector(".blob");
+const name = document.getElementById("my-name");
+const namemoulesh = document.querySelector(".namemoulesh");
+const blob = document.querySelector(".blob");
+const skills = document.querySelectorAll(".skill");
 
 anime ({
     targets: '.namemoulesh',
@@ -37,7 +38,28 @@ anime ({
 });
 
 
+const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+        if (entry.isIntersecting) {
+            const skill = entry.target;
 
+            anime({
+                targets: skill,
+                duration: 2000,
+                width: ['0%', getComputedStyle(skill).width], 
+                easing: 'cubicBezier(.5, .05, .1, .3)',
+            });
+
+            anime ({
+
+            });
+        }
+    });
+}, {
+    threshold: 0.8, 
+});
+
+skills.forEach(skill => observer.observe(skill));
 
 
 name.addEventListener('mouseover', () => {
