@@ -48,9 +48,3 @@ name.addEventListener('mouseout', () => {
     namemoulesh.classList.remove('fill-blue-500');
 });
 
-blob.addEventListener('mouseover', (e)=> {
-    anime ({
-        targets: '.blob',
-        
-    })
-});
