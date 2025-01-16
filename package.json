@@ -1,16 +1,20 @@
 {
+  "homepage": "https://mouleshleo.github.io/creative-portfolio",
   "devDependencies": {
     "gh-pages": "^6.3.0",
     "lite-server": "^2.6.1",
+    "parcel": "^2.13.3",
+    "svgo": "^3.3.2",
     "tailwindcss": "^3.4.17"
   },
   "scripts": {
-    "start": "lite-server",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "parcel index.html",
+    "build": "parcel build index.html",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d dist"
   },
   "name": "creative-portfolio",
   "version": "1.0.0",
-  "main": "index.js",
   "dependencies": {
     "animejs": "^3.2.2",
     "ansi-regex": "^6.1.0",
