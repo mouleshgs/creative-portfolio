@@ -8,10 +8,8 @@
     "tailwindcss": "^3.4.17"
   },
   "scripts": {
-    "start": "parcel index.html",
-    "build": "parcel build index.html",
-    "predeploy": "npm run build",
-    "deploy": "gh-pages -d dist"
+    "start": "lite-server",
+    "build": "parcel build index.html"
   },
   "name": "creative-portfolio",
   "version": "1.0.0",
