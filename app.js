@@ -47,9 +47,8 @@ const observer = new IntersectionObserver((entries) => {
                 easing: 'cubicBezier(.5, .05, .1, .3)',
             });
 
-            anime ({
+            observer.unobserve(skill);
 
-            });
         }
     });
 }, {
