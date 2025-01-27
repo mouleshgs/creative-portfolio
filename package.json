@@ -10,7 +10,7 @@
   "scripts": {
     "start": "lite-server",
     "build": "parcel build index.html"
-  },
+  },  
   "name": "creative-portfolio",
   "version": "1.0.0",
   "dependencies": {
