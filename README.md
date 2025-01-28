@@ -23,7 +23,7 @@ Welcome to my Creative Portfolio! This project showcases my work, including web 
 - **JavaScript**: Adds functionality and animations to the page.
 - **Anime.js**: JavaScript library for creating complex and smooth animations.
 - **AOS (Animate On Scroll)**: Scroll-triggered animations using a CDN.
-- **npm**: Package management for Anime.js and other npm dependencies.
+- **npm**: Package management for Anime.js, TailWindCSS and other npm dependencies.
 - **lite-server**: Lightweight development server to run the portfolio locally.
 
 ## Setup & Installation
