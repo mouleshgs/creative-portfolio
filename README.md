@@ -32,7 +32,7 @@ To get started with the portfolio, follow these steps:
 
 1. **Clone the repository**:
     ```bash
-    git clone https://github.com/mouleshleo/creative-portfolio.git
+    git clone https://github.com/mouleshgs/creative-portfolio.git
     ```
 
 2. **Navigate to the project directory**:
