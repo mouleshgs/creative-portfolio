@@ -23,7 +23,7 @@ Welcome to my Creative Portfolio! This project showcases my work, including web 
 - **JavaScript**: Adds functionality and animations to the page.
 - **Anime.js**: JavaScript library for creating complex and smooth animations.
 - **AOS (Animate On Scroll)**: Scroll-triggered animations using a CDN.
-- **npm**: Package management for Anime.js and other npm dependencies.
+- **npm**: Package management for Anime.js, TailWindCSS and other npm dependencies.
 - **lite-server**: Lightweight development server to run the portfolio locally.
 
 ## Setup & Installation
@@ -32,7 +32,7 @@ To get started with the portfolio, follow these steps:
 
 1. **Clone the repository**:
     ```bash
-    git clone https://github.com/mouleshleo/creative-portfolio.git
+    git clone https://github.com/mouleshgs/creative-portfolio.git
     ```
 
 2. **Navigate to the project directory**:
