@@ -7,6 +7,10 @@
     <title>Moulesh's Portfolio</title>
     <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
     <link rel="stylesheet" href="./output.css" />
+    <link
+  rel="stylesheet"
+  href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+/>
     <style>
       @keyframes blink {
         50% {
@@ -253,134 +257,90 @@
         </h1>
       </div>
 
-      <div data-aos="fade-right" data-aos-delay="200" data-aos-once="true" data-aos-duration="1600" class="flex">
-        <div class="w-2/12 flex items-center">
-          <div class="w-full text-right">
-            <button onclick="prev()"
-              class="p-2 rounded-full bg-blue-400 border border-gray-100 shadow-xl shadow-blue-100 mr-1"
-            >
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                fill="none"
-                viewBox="0 0 24 24"
-                stroke-width="1.5"
-                stroke="#FFF"
-                class="size-6"
-              >
-                <path
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                  d="M10.5 19.5 3 12m0 0 7.5-7.5M3 12h18"
-                />
-              </svg>
-            </button>
+<!-- slider -->
+<!-- Slider main container -->
+<div class="swiper mySwiper mt-20">
+  <div class="swiper-wrapper">
+      <!-- Slide 1 -->
+      <div class="swiper-slide">
+          <div class="border rounded-lg p-5 h-full bg-white shadow-md">
+              <img class="h-50 w-full object-cover rounded-md" src="./assests/unsplash.png" alt="Unsplash Image" />
+              <h2 class="mt-2 text-2xl font-semibold text-gray-700">Unsplash Image Getter</h2>
+              <p class="mt-2 text-slate-500">
+                  The Unsplash Image Getter is a React app that allows you to search and set stunning Unsplash images as your website’s background. Done using React and Unsplash API.
+              </p>
+              <button class="hover:scale-105 transition-all mt-4 px-6 py-3 rounded-md bg-blue-500 shadow-lg text-white font-bold w-full">
+                  <a href="https://mouleshgs.github.io/unsplash-image-getter" target="_blank">View Project</a>
+              </button>
           </div>
-        </div>
-        <div id="sliderContainer" class="w-full overflow-hidden -mt-2">
-          <ul id="slider" class="flex w-full">
-            <li class="sliderList p-5">
-              <div class="border rounded-lg p-5 h-full">
-              <img class="h-50 w-full object-cover rounded-md" src="./assests/unsplash.png" alt="" />
-              <h2 class="mt-2 text-2xl font-semibold text-gray-700">unsplash Image Getter</h2>
-              <p class="mt-2 text-slate-500">
-                The Unsplash Image Getter is a React app that allows you to search and set stunning Unsplash images as your website’s background. 
-                done using React and Unsplash API.
-              </p>
-              <button class="hover:scale-105 transition-all mt-4 px-6 py-3 rounded-md bg-blue-500 shadow-lg text-slate-100 font-bold"> <a href="https://mouleshgs.github.io/unsplash-image-getter" target="_blank">View Project</a></button>
-            </div>
-            </li>
-            <li class="sliderList p-5">
-              <div class="border rounded-lg p-5 h-full">
-              <img class="h-50 w-full object-cover rounded-md" src="./assests/spotify.jpg" alt="" />
-              <h2 class="mt-2 text-2xl font-semibold text-gray-700">Spotify Api App</h2>
-              <p class="mt-2 text-slate-500">
-                A React and TailwindCSS-based app that integrates with the Spotify API to let users log in, view their playlists, and 
-                explore songs within selected playlists.
-              </p>
-              <button class="hover:scale-105 transition-all mt-4 px-6 py-3 rounded-md bg-blue-500 shadow-lg text-slate-100 font-bold"><a href="https://github.com/mouleshgs/spotify-api-app" target="_blank">View Project</a></button>
-            </div>
-            </li>
-            <li class="sliderList p-5">
-              <div class="border rounded-lg p-5 h-full">
-              <img class="h-50 w-full object-cover rounded-md" src="./assests/advice.png" alt="" />
-              <h2 class="mt-2 text-2xl font-semibold text-gray-700">Advice Generator</h2>
-              <p class="mt-2 text-slate-500">
-                This is a simple web application built with React, Tailwind CSS and Advice Slip JSON API that provides random pieces of advice to users. 
-                
-              </p>
-              <button class="hover:scale-105 transition-all mt-4 px-6 py-3 rounded-md bg-blue-500 shadow-lg text-slate-100 font-bold"><a href="https://mouleshgs.github.io/advice-generator/" target="_blank">View Project</a></button>
-            </div>
-            </li>
-            <li class="sliderList p-5">
-              <div class="border rounded-lg p-5 h-full">
-              <img class="h-50 w-full object-cover rounded-md" src="./assests/unsplash.png" alt="" />
-              <h2 class="mt-2 text-2xl font-semibold text-gray-700">Some big Heading</h2>
-              <p class="mt-2 text-slate-500">
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Atque
-                soluta dolor perferendis ducimus quidem. 
-              </p>
-              <button class="hover:scale-105 transition-all mt-4 px-6 py-3 rounded-md bg-blue-500 shadow-lg text-slate-100 font-bold">View Project</button>
-            </div>
-            </li>
-            <li class="sliderList p-5">
-              <div class="border rounded-lg p-5 h-full">
-              <img class="h-50 w-full object-cover rounded-md" src="./assests/spotify.jpg" alt="" />
-              <h2 class="mt-2 text-2xl font-semibold text-gray-700">Some big Heading</h2>
-              <p class="mt-2 text-slate-500">
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Atque
-                soluta dolor perferendis ducimus quidem. 
-              </p>
-              <button class="hover:scale-105 transition-all mt-4 px-6 py-3 rounded-md bg-blue-500 shadow-lg text-slate-100 font-bold">View Project</button>
-            </div>
-            </li>
-            <li class="sliderList p-5">
-              <div class="border rounded-lg p-5 h-full">
-              <img class="h-50 w-full object-cover rounded-md" src="./assests/tictactoe.webp" alt="" />
-              <h2 class="mt-2 text-2xl font-semibold text-gray-700">Some big Heading</h2>
-              <p class="mt-2 text-slate-500">
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Atque
-                soluta dolor perferendis ducimus quidem. 
-              </p>
-              <button class="hover:scale-105 transition-all mt-4 px-6 py-3 rounded-md bg-blue-500 shadow-lg text-slate-100 font-bold">View Project</button>
-            </div>
-            </li>
-            <li class="sliderList p-5">
-              <div class="border rounded-lg p-5 h-full">
-              <img class="h-50 w-full object-cover rounded-md" src="./assests/unsplash.png" alt="" />
-              <h2 class="mt-2 text-2xl font-semibold text-gray-700">Some big Heading</h2>
-              <p class="mt-2 text-slate-500">
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Atque
-                soluta dolor perferendis ducimus quidem. 
-              </p>
-              <button class="hover:scale-105 transition-all mt-4 px-6 py-3 rounded-md bg-blue-500 shadow-lg text-slate-100 font-bold">View Project</button>
-            </div>
-            </li>
-          </ul>
-        </div>
-        <div class="w-2/12 flex items-center">
-          <div class="w-full">
-            <button onclick="next()"
-              class="p-2 rounded-full border bg-blue-400 border-gray-100 shadow-xl shadow-blue-100 ml-3"
-            >
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                fill="none"
-                viewBox="0 0 24 24"
-                stroke-width="1.5"
-                stroke="#FFF"
-                class="size-6"
-              >
-                <path
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                  d="M13.5 4.5 21 12m0 0-7.5 7.5M21 12H3"
-                />
-              </svg>
-            </button>
+      </div>
+
+      <!-- Slide 2 (Duplicate for More Projects) -->
+      <div class="swiper-slide">
+          <div class="border rounded-lg p-5 h-full bg-white shadow-md">
+            <img class="h-50 w-full object-cover rounded-md" src="./assests/spotify.jpg" alt="" />
+            <h2 class="mt-2 text-2xl font-semibold text-gray-700">Spotify Api App</h2>
+            <p class="mt-2 text-slate-500">
+              A React and TailwindCSS-based app that integrates with the Spotify API to let users log in, view their playlists, and 
+              explore songs within selected playlists.
+            </p>
+            <button class="hover:scale-105 transition-all mt-4 px-6 py-3 rounded-md bg-blue-500 shadow-lg text-slate-100 font-bold w-full">
+              <a href="https://github.com/mouleshgs/spotify-api-app" target="_blank">View Project</a></button>
           </div>
+      </div>
+      <div class="swiper-slide">
+        <div class="border rounded-lg p-5 h-full bg-white shadow-md">
+          <img class="h-50 w-full object-cover rounded-md" src="./assests/advice.png" alt="" />
+          <h2 class="mt-2 text-2xl font-semibold text-gray-700">Advice Generator</h2>
+          <p class="mt-2 text-slate-500">
+            This is a simple web application built with React, Tailwind CSS and Advice Slip JSON API that provides random pieces of advice to users. 
+            
+          </p>
+          <button class="hover:scale-105 transition-all mt-4 px-6 py-3 rounded-md bg-blue-500 shadow-lg text-slate-100 font-bold w-full"><a href="https://mouleshgs.github.io/advice-generator/" target="_blank">View Project</a></button>
         </div>
       </div>
+
+      <div class="swiper-slide">
+        <div class="border rounded-lg p-5 h-full">
+          <img class="h-50 w-full object-cover rounded-md" src="./assests/tictactoe.webp" alt="" />
+          <h2 class="mt-2 text-2xl font-semibold text-gray-700">Some big Heading</h2>
+          <p class="mt-2 text-slate-500">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Atque
+            soluta dolor perferendis ducimus quidem. 
+          </p>
+          <button class="hover:scale-105 transition-all mt-4 px-6 py-3 rounded-md bg-blue-500 shadow-lg text-slate-100 font-bold w-full">View Project</button>
+        </div>
+      </div>
+      <div class="swiper-slide">
+        <div class="border rounded-lg p-5 h-full">
+          <img class="h-50 w-full object-cover rounded-md" src="./assests/spotify.jpg" alt="" />
+          <h2 class="mt-2 text-2xl font-semibold text-gray-700">Some big Heading</h2>
+          <p class="mt-2 text-slate-500">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Atque
+            soluta dolor perferendis ducimus quidem. 
+          </p>
+          <button class="hover:scale-105 transition-all mt-4 px-6 py-3 rounded-md bg-blue-500 shadow-lg text-slate-100 font-bold w-full">View Project</button>
+        </div>
+      </div>
+      <div class="swiper-slide">
+        <div class="border rounded-lg p-5 h-full">
+          <img class="h-50 w-full object-cover rounded-md" src="./assests/unsplash.png" alt="" />
+          <h2 class="mt-2 text-2xl font-semibold text-gray-700">Some big Heading</h2>
+          <p class="mt-2 text-slate-500">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Atque
+            soluta dolor perferendis ducimus quidem. 
+          </p>
+          <button class="hover:scale-105 transition-all mt-4 px-6 py-3 rounded-md bg-blue-500 shadow-lg text-slate-100 font-bold w-full">View Project</button>
+        </div>
+      </div>
+
+      <!-- Add more slides as needed -->
+  </div>
+</div>
     </section>
+
+
+    <!-- footer -->
     <footer class="bg-blue-600 text-slate-100 py-3">
       <div class="container mx-auto px-4 text-center">
         <!-- Quick Links -->
@@ -423,6 +383,7 @@
 
     <!-- javascript files -->
     <script src="./anime.min.js" defer></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
     <script src="./index.js"></script>
     <script type="module" src="./app.js" defer></script>
     <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
