@@ -25,11 +25,13 @@
         class="text-lg lg:text-la flex justify-between font-light bg-blue-600 text-white p-10 h-16 items-center"
       >
       <div class="flex justify-around lg:hidden md:gap-48 items-center gap-20">
-        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6">
+        <svg class="menu" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6">
           <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
         </svg>
         <h1 class="text-center whitespace-nowrap">Moulesh's Portfolio</h1> 
       </div> 
+
+
         <div class="ml-5">
           <ul class="gap-10 hidden lg:flex md:flex">
             <li class="hover:text-slate-400"><a href="./#">Home</a></li>
@@ -259,7 +261,10 @@
 
 <!-- slider -->
 <!-- Slider main container -->
-<div class="swiper mySwiper mt-20">
+<div data-aos="fade-right"
+data-aos-duration="2700"
+data-aos-once="true"
+ class="swiper mySwiper mt-20">
   <div class="swiper-wrapper">
       <!-- Slide 1 -->
       <div class="swiper-slide">
@@ -275,7 +280,6 @@
           </div>
       </div>
 
-      <!-- Slide 2 (Duplicate for More Projects) -->
       <div class="swiper-slide">
           <div class="border rounded-lg p-5 h-full bg-white shadow-md">
             <img class="h-50 w-full object-cover rounded-md" src="./assests/spotify.jpg" alt="" />
