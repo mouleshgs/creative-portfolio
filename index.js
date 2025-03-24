@@ -12,3 +12,10 @@ var swiper = new Swiper(".mySwiper", {
         delay: 5000,
     },
 });
+
+let menu = document.querySelector(".menu");
+let mobileMenu = document.querySelector(".mobile-menu");
+
+menu.addEventListener("click", (e) => {
+    mobileMenu.classList.toggle("hidden");
+});
