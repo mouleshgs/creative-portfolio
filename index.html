@@ -7,17 +7,12 @@
     <title>Moulesh's Portfolio</title>
     <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
     <link rel="stylesheet" href="./output.css" />
+    <link rel="stylesheet" href="./kursor/kursor.css">
+
     <link
   rel="stylesheet"
   href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
 />
-    <style>
-      @keyframes blink {
-        50% {
-        border-color: transparent;
-        }
-      }
-    </style>
   </head>
   <body class="bg-yellow-100 overflow-x-hidden">
     <section>
@@ -78,7 +73,7 @@
         data-aos="fade-up"
         data-aos-duration="3000"
         data-aos-delay="300"
-        class="flex justify-center items-center mt-24"
+        class="fullname flex justify-center items-center mt-24"
       >
         <svg
           id="my-name"
@@ -400,8 +395,15 @@ data-aos-once="true"
     <script src="./index.js"></script>
     <script type="module" src="./app.js" defer></script>
     <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/kursor@0.0.14/dist/kursor.js"></script>
     <script>
       AOS.init();
+      
+      new kursor ({
+        type: 2,
+        removeDefaultCursor: true,
+        color: '#2563eb'
+      })
     </script>
   </body>
 </html>

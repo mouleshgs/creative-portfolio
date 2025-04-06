@@ -40,3 +40,4 @@ menu.addEventListener("click", () => {
     mobileMenu.classList.toggle("translate-y-0");
     mobileMenu.classList.toggle("pointer-events-auto");
 });
+
