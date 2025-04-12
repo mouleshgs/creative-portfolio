@@ -138,7 +138,7 @@
       class="overflow-hidden min-h-screen flex items-center justify-center"
     >
       <div
-        class="flex gap-8 flex-col w-full lg:w-1/2 justify-center items-center text-center"
+        class=" relative lg:static top-24 flex gap-10 lg:gap-8 flex-col w-full lg:w-1/2 justify-center items-center text-center"
       >
         <h1
           class="text-3xl lg:text-4xl text-blue-600 font-extrabold font-mono mb-4"
@@ -202,11 +202,11 @@
         <!-- Image Above the Blob -->
         <img src="./assests/myimage.jpg" 
              alt="Portfolio image of mine"
-             class="hover:scale-110 transition-all rounded-full w-40 h-40 lg:w-50 lg:h-50 object-cover z-10 absolute top-1/3 left-1/4" />
+             class="lg:opacity-90 left-1/3 hover:scale-110 transition-all rounded-full w-44 h-44 lg:w-50 lg:h-50 object-cover z-10 absolute lg:top-[31%] lg:left-1/4" />
       
         <!-- Blob SVG -->
         <svg
-          class="blob"
+          class="blob opacity-25 lg:opacity-80 "
           id="visual"
           viewBox="0 0 500 500"
           width="500"
