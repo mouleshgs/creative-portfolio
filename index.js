@@ -2,7 +2,7 @@
 var swiper = new Swiper(".mySwiper", {
     effect: "cards",
     grabCursor: true,
-    initialSlide: 2,
+    initialSlide: 0,
     autoplay: {
         delay: 5000,
     },
