@@ -34,6 +34,18 @@ anime ({
     loop:true,
 });
 
+  anime({
+    targets: '#floating-div',
+    scale: [1.1, 1.15],
+    rotate: [10, -3, 10],
+    duration: 6000,
+    delay: 500,
+    easing: 'easeInOutSine',
+    direction: 'alternate',
+    loop: true
+  });
+
+
 
 const observer = new IntersectionObserver((entries) => {
     entries.forEach(entry => {
