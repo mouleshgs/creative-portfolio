@@ -4,6 +4,10 @@ module.exports = {
   theme: {
     
     extend: {
+      fontFamily: {
+        sans: ['Geist', 'sans-serif'],
+        mono: ['monospace'],
+      },
       animation: {
         'blink': 'blink ease-in 3s infinite',
       },
