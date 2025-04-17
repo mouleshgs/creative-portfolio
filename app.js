@@ -42,7 +42,7 @@ anime ({
     delay: 500,
     easing: 'easeInOutSine',
     direction: 'alternate',
-    loop: true
+    loop: 3
   });
 
 
