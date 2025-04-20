@@ -716,6 +716,22 @@ video {
   left: 56%;
 }
 
+.top-\[\%\] {
+  top: %;
+}
+
+.top-\[28\%\] {
+  top: 28%;
+}
+
+.top-\[25\%\] {
+  top: 25%;
+}
+
+.top-\[26\%\] {
+  top: 26%;
+}
+
 .z-10 {
   z-index: 10;
 }
@@ -862,6 +878,10 @@ video {
   height: 15rem;
 }
 
+.h-56 {
+  height: 14rem;
+}
+
 .min-h-\[700px\] {
   min-height: 700px;
 }
@@ -936,6 +956,14 @@ video {
 
 .w-3 {
   width: 0.75rem;
+}
+
+.w-5 {
+  width: 1.25rem;
+}
+
+.w-56 {
+  width: 14rem;
 }
 
 .min-w-\[400px\] {
