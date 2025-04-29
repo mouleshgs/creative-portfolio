@@ -644,8 +644,8 @@ video {
   left: -3;
 }
 
-.left-\[56\%\] {
-  left: 56%;
+.left-\[50\%\] {
+  left: 50%;
 }
 
 .right-20 {
@@ -680,46 +680,6 @@ video {
   top: -40px;
 }
 
-.top-\[26\%\] {
-  top: 26%;
-}
-
-.top-\[\%\] {
-  top: %;
-}
-
-.top-\[10\%\] {
-  top: 10%;
-}
-
-.top-\[1\%\] {
-  top: 1%;
-}
-
-.top-\[15\%\] {
-  top: 15%;
-}
-
-.top-\[17\%\] {
-  top: 17%;
-}
-
-.left-\[50\%\] {
-  left: 50%;
-}
-
-.left-\[55\%\] {
-  left: 55%;
-}
-
-.top-2 {
-  top: 0.5rem;
-}
-
-.top-28 {
-  top: 7rem;
-}
-
 .z-10 {
   z-index: 10;
 }
@@ -730,10 +690,6 @@ video {
 
 .z-\[-1\] {
   z-index: -1;
-}
-
-.z-0 {
-  z-index: 0;
 }
 
 .m-4 {
@@ -938,6 +894,11 @@ video {
   max-width: 24rem;
 }
 
+.-translate-x-1\/2 {
+  --tw-translate-x: -50%;
+  transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
+}
+
 .-translate-y-5 {
   --tw-translate-y: -1.25rem;
   transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
@@ -945,11 +906,6 @@ video {
 
 .translate-y-0 {
   --tw-translate-y: 0px;
-  transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
-}
-
-.-translate-x-1\/2 {
-  --tw-translate-x: -50%;
   transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
 }
 
@@ -1580,28 +1536,20 @@ section {
     left: 30rem;
   }
 
-  .lg\:left-\[72\%\] {
-    left: 72%;
+  .lg\:left-\[70\%\] {
+    left: 70%;
   }
 
   .lg\:top-50 {
     top: 18rem;
   }
 
-  .lg\:top-\[17\%\] {
-    top: 17%;
-  }
-
-  .lg\:top-\[31\%\] {
-    top: 31%;
-  }
-
   .lg\:top-\[15\%\] {
     top: 15%;
   }
 
-  .lg\:left-\[70\%\] {
-    left: 70%;
+  .lg\:top-\[31\%\] {
+    top: 31%;
   }
 
   .lg\:block {
