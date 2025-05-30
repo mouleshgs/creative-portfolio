@@ -23,6 +23,7 @@ mongoose.connect(process.env.MONGO_URI)
 
 
 app.post("/contact", async (req, res) => {
+    console.log("POST /contact received:", req.body); 
   try {
     const { name, email, message } = req.body;
     const newContact = new Contact({ name, email, message });
@@ -45,7 +46,7 @@ app.get(/^\/(?!contact).*/, (req, res) => {
 
 
 app.listen(port, () => {
-  console.log(`🚀 Server running at http://localhost:${port}`);
+  console.log(`🚀 Server running at cloud ${port}`);
 console.log(__dirname);
 
 });

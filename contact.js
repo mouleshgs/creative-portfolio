@@ -14,7 +14,7 @@ console.log(bodyJSON);
 
 
 try {
-    const response = await fetch("http://localhost:5000/contact", {
+    const response = await fetch("https://creative-portfolio-97fw.onrender.com/contact", {
         method: "POST",
         headers: {
             "content-type": "application/json", 
