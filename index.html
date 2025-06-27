@@ -35,6 +35,8 @@
   </head>
   <body class="bg-yellow-100 overflow-x-hidden antialiased">
     <section>
+        <canvas id="confetti-canvas" class="fixed top-0 left-0 w-screen h-screen -z-50 pointer-events-none"></canvas>
+
       <div
         class="text-lg lg:text-la flex justify-between font-light bg-blue-600 text-white p-10 h-16 items-center"
       >
@@ -231,7 +233,7 @@
         <!-- Image Above the Blob -->
         <img src="./assests/myimage.jpg" 
              alt="Portfolio image of mine"
-             class="lg:opacity-90 left-1/3 hover:scale-110 transition-all rounded-full w-44 h-44 lg:w-50 lg:h-50 object-cover z-10 absolute lg:top-[31%] lg:left-1/4" />
+             class="lg:opacity-90 left-1/3 hover:opacity-95 hover:scale-110 transition-all rounded-full w-44 h-44 lg:w-50 lg:h-50 object-cover z-10 absolute lg:top-[31%] lg:left-1/4" />
       
         <!-- Blob SVG -->
         <svg
@@ -445,6 +447,7 @@ data-aos-once="true"
     <!-- javascript files -->
     <script src="./anime.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js" defer></script>
+    <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.9.3/dist/confetti.browser.min.js"></script>
     <script src="./index.js" defer></script>
     <script type="module" src="./app.js"></script>
     <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
