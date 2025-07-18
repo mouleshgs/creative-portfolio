@@ -10,9 +10,6 @@ e.preventDefault();
 const bodyJSON = JSON.stringify({ name, email, message });
 
 
-console.log(bodyJSON);
-
-
 try {
     const response = await fetch("https://creative-portfolio-97fw.onrender.com/contact", {
         method: "POST",
