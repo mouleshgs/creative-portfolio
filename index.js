@@ -76,7 +76,6 @@ var swiper = new Swiper(".mySwiper", {
     },
 });
 
-
 let menu = document.querySelector(".menu");
 let mobileMenu = document.querySelector(".mobile-menu");
 
