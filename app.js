@@ -12,6 +12,8 @@ const name = document.getElementById("my-name");
 const namemoulesh = document.querySelector(".namemoulesh");
 const blob = document.querySelector(".blob");
 const skills = document.querySelectorAll(".skill");
+const programming = document.querySelector(".programming");
+
 
 anime ({
     targets: '.namemoulesh',
@@ -44,6 +46,16 @@ anime ({
     direction: 'alternate',
     loop: 3
   });
+
+anime ({
+    targets: '.programming',
+    rotate: [3, -5, 3],
+    scale: [1.1, 1.12],
+    duration: 7000,
+    easing: 'easeInOutSine',
+    direction: 'alternate',
+    loop:true,
+});
 
 
 
