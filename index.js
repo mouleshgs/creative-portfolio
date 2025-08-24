@@ -5,7 +5,7 @@ const myConfetti = confetti.create(canvas, {
   useWorker: true
 });
 
-const duration = 14 * 1000;
+const duration = 9 * 1000;
 const animationEnd = Date.now() + duration;
 let skew = 1;
 
@@ -25,7 +25,7 @@ function randomInRange(min, max) {
     ticks: ticks,
     origin: {
       x: Math.random(),
-      y: Math.random() * skew - 0.2
+      y: Math.random() * skew - 0.3
     },
     colors: ['#155dfc', '#2b7fff'],
     shapes: ['circle', 'circle', 'square'],
