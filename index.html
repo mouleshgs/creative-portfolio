@@ -21,17 +21,38 @@
 
     <!-- favicon ends -->
 
-    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
-    <link rel="stylesheet" href="./output.css" />
-    <link rel="stylesheet" href="./kursor/kursor.css">
-    <link
-  rel="stylesheet"
-  href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
-/>
-<style>
-@import url('https://fonts.googleapis.com/css2?family=Geist:wght@100..900&display=swap');
+    <!-- fonts -->
+     
+      <link rel="preconnect" href="https://fonts.googleapis.com">
+      <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
-  </style>
+      <link href="https://fonts.googleapis.com/css2?family=Geist:wght@100..900&display=swap" rel="stylesheet" media="print" onload="this.media='all'">
+
+      <noscript>
+        <link href="https://fonts.googleapis.com/css2?family=Geist:wght@100..900&display=swap" rel="stylesheet">
+      </noscript>
+
+    <!-- fonts ends -->
+
+    <!-- AOS CSS: async load -->
+      <link rel="preload" href="https://unpkg.com/aos@next/dist/aos.css" as="style" 
+            onload="this.onload=null;this.rel='stylesheet'">
+      <noscript>
+        <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css">
+      </noscript>
+
+    <!-- Swiper CSS: async load -->
+      <link rel="preload" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" as="style" 
+            onload="this.onload=null;this.rel='stylesheet'">
+      <noscript>
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css">
+      </noscript>
+
+
+      <link rel="stylesheet" href="./output.css">
+      <link rel="stylesheet" href="./kursor/kursor.css">
+
+
   </head>
   <body class="bg-yellow-100 overflow-x-hidden antialiased">
     <section>
