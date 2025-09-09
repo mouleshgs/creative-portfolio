@@ -5,7 +5,7 @@ const myConfetti = confetti.create(canvas, {
   useWorker: true
 });
 
-const duration = 9 * 1000;
+const duration = 6 * 1000;
 const animationEnd = Date.now() + duration;
 let skew = 1;
 
