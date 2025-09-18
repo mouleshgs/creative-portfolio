@@ -1075,6 +1075,10 @@ video {
   background-image: url('./assests/computer2_bg.png');
 }
 
+.bg-\[url\(\'\.\/assests\/computer2_bg\.webp\'\)\] {
+  background-image: url('./assests/computer2_bg.webp');
+}
+
 .bg-cover {
   background-size: cover;
 }
