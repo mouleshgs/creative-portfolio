@@ -668,6 +668,14 @@ video {
   top: -40px;
 }
 
+.top-20 {
+  top: 5rem;
+}
+
+.left-\[52\%\] {
+  left: 52%;
+}
+
 .-z-50 {
   z-index: -50;
 }
@@ -1136,6 +1144,10 @@ video {
   padding: 1.5rem;
 }
 
+.p-9 {
+  padding: 2.25rem;
+}
+
 .px-4 {
   padding-left: 1rem;
   padding-right: 1rem;
@@ -1542,6 +1554,18 @@ section {
 
   .lg\:top-\[31\%\] {
     top: 31%;
+  }
+
+  .lg\:top-\[12\%\] {
+    top: 12%;
+  }
+
+  .lg\:top-\[10\%\] {
+    top: 10%;
+  }
+
+  .lg\:left-\[73\%\] {
+    left: 73%;
   }
 
   .lg\:ml-24 {
