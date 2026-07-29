@@ -1,121 +1,62 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from './assets/vite.svg'
-import heroImg from './assets/hero.png'
-import './App.css'
+import { useEffect } from 'react'
+import AOS from 'aos'
+import 'aos/dist/aos.css'
+import Header from './components/Header'
+import Hero from './components/Hero'
+import About from './components/About'
+import Skills from './components/Skills'
+import Projects from './components/Projects'
+import '../public/output.css'
+import confetti from 'canvas-confetti'
 
 function App() {
-  const [count, setCount] = useState(0)
+  useEffect(() => {
+    AOS.init({ once: true })
+
+    // confetti similar to original site
+    const canvas = document.getElementById('confetti-canvas')
+    if (!canvas) return
+    const myConfetti = confetti.create(canvas, { resize: true, useWorker: true })
+    const duration = 6 * 1000
+    const animationEnd = Date.now() + duration
+    let skew = 1
+
+    function randomInRange(min, max) {
+      return Math.random() * (max - min) + min
+    }
+
+    ;(function frame() {
+      const timeLeft = animationEnd - Date.now()
+      const ticks = Math.max(200, 500 * (timeLeft / duration))
+      skew = Math.max(0.8, skew - 0.001)
+
+      myConfetti({
+        particleCount: 1,
+        startVelocity: 0,
+        ticks: ticks,
+        origin: { x: Math.random(), y: Math.random() * skew - 0.3 },
+        colors: ['#155dfc', '#2b7fff'],
+        shapes: ['circle', 'circle', 'square'],
+        gravity: randomInRange(0.4, 0.6),
+        scalar: randomInRange(0.5, 1),
+        drift: randomInRange(-0.5, 0.5)
+      })
+
+      if (timeLeft > 0) requestAnimationFrame(frame)
+    })()
+  }, [])
 
   return (
-    <>
-      <section id="center">
-        <div className="hero">
-          <img src={heroImg} className="base" width="170" height="179" alt="" />
-          <img src={reactLogo} className="framework" alt="React logo" />
-          <img src={viteLogo} className="vite" alt="Vite logo" />
-        </div>
-        <div>
-          <h1>Get started</h1>
-          <p>
-            Edit <code>src/App.jsx</code> and save to test <code>HMR</code>
-          </p>
-        </div>
-        <button
-          type="button"
-          className="counter"
-          onClick={() => setCount((count) => count + 1)}
-        >
-          Count is {count}
-        </button>
-      </section>
-
-      <div className="ticks"></div>
-
-      <section id="next-steps">
-        <div id="docs">
-          <svg className="icon" role="presentation" aria-hidden="true">
-            <use href="/icons.svg#documentation-icon"></use>
-          </svg>
-          <h2>Documentation</h2>
-          <p>Your questions, answered</p>
-          <ul>
-            <li>
-              <a href="https://vite.dev/" target="_blank">
-                <img className="logo" src={viteLogo} alt="" />
-                Explore Vite
-              </a>
-            </li>
-            <li>
-              <a href="https://react.dev/" target="_blank">
-                <img className="button-icon" src={reactLogo} alt="" />
-                Learn more
-              </a>
-            </li>
-          </ul>
-        </div>
-        <div id="social">
-          <svg className="icon" role="presentation" aria-hidden="true">
-            <use href="/icons.svg#social-icon"></use>
-          </svg>
-          <h2>Connect with us</h2>
-          <p>Join the Vite community</p>
-          <ul>
-            <li>
-              <a href="https://github.com/vitejs/vite" target="_blank">
-                <svg
-                  className="button-icon"
-                  role="presentation"
-                  aria-hidden="true"
-                >
-                  <use href="/icons.svg#github-icon"></use>
-                </svg>
-                GitHub
-              </a>
-            </li>
-            <li>
-              <a href="https://chat.vite.dev/" target="_blank">
-                <svg
-                  className="button-icon"
-                  role="presentation"
-                  aria-hidden="true"
-                >
-                  <use href="/icons.svg#discord-icon"></use>
-                </svg>
-                Discord
-              </a>
-            </li>
-            <li>
-              <a href="https://x.com/vite_js" target="_blank">
-                <svg
-                  className="button-icon"
-                  role="presentation"
-                  aria-hidden="true"
-                >
-                  <use href="/icons.svg#x-icon"></use>
-                </svg>
-                X.com
-              </a>
-            </li>
-            <li>
-              <a href="https://bsky.app/profile/vite.dev" target="_blank">
-                <svg
-                  className="button-icon"
-                  role="presentation"
-                  aria-hidden="true"
-                >
-                  <use href="/icons.svg#bluesky-icon"></use>
-                </svg>
-                Bluesky
-              </a>
-            </li>
-          </ul>
-        </div>
-      </section>
-
-      <div className="ticks"></div>
-      <section id="spacer"></section>
-    </>
+    <div className="bg-yellow-100 min-h-screen overflow-x-hidden antialiased">
+      <canvas id="confetti-canvas" className="fixed top-0 left-0 w-screen h-screen -z-50 pointer-events-none"></canvas>
+      <Header />
+      <main>
+        <Hero />
+        <About />
+        <Skills />
+        <Projects />
+      </main>
+    </div>
   )
 }
 
