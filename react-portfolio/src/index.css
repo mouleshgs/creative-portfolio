@@ -52,6 +52,7 @@
 
 body {
   margin: 0;
+  padding: 0;
 }
 
 #root {
@@ -108,4 +109,40 @@ code {
   line-height: 135%;
   padding: 4px 8px;
   background: var(--code-bg);
+}
+
+:root {
+  color-scheme: light;
+  color: inherit;
+  background: transparent;
+  font: inherit;
+  letter-spacing: normal;
+}
+
+body {
+  min-width: 320px;
+  background: #fef9c3;
+}
+
+#root {
+  width: auto;
+  max-width: none;
+  margin: 0;
+  text-align: initial;
+  border: 0;
+  min-height: 100vh;
+  display: block;
+}
+
+h1,
+h2 {
+  font-family: inherit;
+  font-weight: inherit;
+  color: inherit;
+}
+
+h1 {
+  font-size: inherit;
+  letter-spacing: inherit;
+  margin: 0;
 }

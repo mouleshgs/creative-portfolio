@@ -1,0 +1,107 @@
+@import url('https://fonts.googleapis.com/css2?family=Geist:wght@100..900&display=swap');
+
+* {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  margin: 0;
+  min-height: 100%;
+}
+
+body {
+  min-height: 100vh;
+  padding: 1rem;
+  position: relative;
+  overflow: hidden;
+  background: #fef9c3;
+  color: #334155;
+  font-family: Geist, sans-serif;
+}
+
+.contact-layout {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2.5rem;
+  margin-top: 1.5rem;
+}
+
+.contact-card {
+  width: 100%;
+  max-width: 24rem;
+  padding: 1.5rem;
+  position: relative;
+  z-index: 1;
+  background: #fff;
+  border: 2px solid #2563eb;
+  box-shadow: 10px 8px 0 #2563eb;
+}
+
+h1 {
+  margin: 0 0 1rem;
+  color: #1e293b;
+  font-size: 1.5rem;
+  line-height: 2rem;
+  font-weight: 700;
+}
+
+label {
+  display: block;
+  margin-top: 0.5rem;
+}
+
+input,
+textarea {
+  display: block;
+  width: 100%;
+  margin-top: 0.25rem;
+  padding: 0.5rem;
+  background: transparent;
+  border: 2px solid #93c5fd;
+  font: inherit;
+}
+
+textarea {
+  resize: vertical;
+}
+
+form button,
+body > div:first-of-type + div button {
+  width: 100%;
+  margin-top: 1rem;
+  padding: 0.5rem;
+  color: #fff;
+  background: #3b82f6;
+  border: 0;
+  font: inherit;
+  font-weight: 600;
+  text-transform: uppercase;
+  cursor: pointer;
+}
+
+form button:hover,
+body > div:first-of-type + div button:hover {
+  background: #2563eb;
+}
+
+.contact-layout > p {
+  width: 15rem;
+  margin: 0;
+  text-align: center;
+}
+
+.back-home {
+  display: flex;
+  justify-content: center;
+}
+
+.back-home button {
+  width: auto;
+  margin-top: 1.75rem;
+  padding: 1rem;
+  border-radius: 0.5rem;
+  box-shadow: 0 10px 15px -3px rgb(0 0 0 / 0.2);
+  text-transform: none;
+}

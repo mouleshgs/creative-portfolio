@@ -3,13 +3,20 @@ import { useEffect } from 'react'
 export default function Skills() {
   useEffect(() => {
     const skills = document.querySelectorAll('.skill')
+    const targetWidths = new Map()
+
+    skills.forEach((skill) => {
+      targetWidths.set(skill, getComputedStyle(skill).width)
+      skill.style.width = '0%'
+      skill.style.transition = 'width 3s ease-in-out'
+    })
+
     const observer = new IntersectionObserver(
       (entries) => {
         entries.forEach((entry) => {
           if (entry.isIntersecting) {
             const skill = entry.target
-            const fullWidth = getComputedStyle(skill).width
-            skill.style.width = fullWidth
+            skill.style.width = targetWidths.get(skill)
             observer.unobserve(skill)
           }
         })
@@ -17,11 +24,7 @@ export default function Skills() {
       { threshold: 0.5 }
     )
 
-    skills.forEach((s) => {
-      // start collapsed
-      s.style.width = '0%'
-      observer.observe(s)
-    })
+    skills.forEach((skill) => observer.observe(skill))
     return () => observer.disconnect()
   }, [])
 
@@ -36,6 +39,10 @@ export default function Skills() {
         <div className="w-auto bg-yellow-50 h-8 rounded"><div className="skill bg-blue-500 w-4/6 h-8 rounded-l text-center"><p className="pt-1 text-white">70%</p></div></div>
         <p className="text-xl text-slate-200">Linux, Git</p>
         <div className="w-auto bg-yellow-50 h-8 rounded"><div className="skill bg-blue-500 w-3/4 h-8 rounded-l text-center"><p className="pt-1 text-white">75%</p></div></div>
+        <p className="text-xl text-slate-200">Database</p>
+        <div className="w-auto bg-yellow-50 h-8 rounded"><div className="skill bg-blue-500 w-2/3 h-8 rounded-l text-center"><p className="pt-1 text-white">65%</p></div></div>
+        <p className="text-xl text-slate-200">Machine Learning</p>
+        <div className="w-auto bg-yellow-50 h-8 rounded"><div className="skill bg-blue-500 w-11/12 h-8 rounded-l text-center"><p className="pt-1 text-white">90%</p></div></div>
       </div>
     </section>
   )

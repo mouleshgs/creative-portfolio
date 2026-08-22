@@ -6,8 +6,10 @@ import Hero from './components/Hero'
 import About from './components/About'
 import Skills from './components/Skills'
 import Projects from './components/Projects'
-import '../public/output.css'
+import Footer from './components/Footer'
+import '../../output.css'
 import confetti from 'canvas-confetti'
+import { FaFileAlt } from 'react-icons/fa'
 
 function App() {
   useEffect(() => {
@@ -24,6 +26,8 @@ function App() {
     function randomInRange(min, max) {
       return Math.random() * (max - min) + min
     }
+
+    let animationFrame
 
     ;(function frame() {
       const timeLeft = animationEnd - Date.now()
@@ -42,20 +46,31 @@ function App() {
         drift: randomInRange(-0.5, 0.5)
       })
 
-      if (timeLeft > 0) requestAnimationFrame(frame)
+      if (timeLeft > 0) animationFrame = requestAnimationFrame(frame)
     })()
+
+    return () => cancelAnimationFrame(animationFrame)
   }, [])
 
   return (
-    <div className="bg-yellow-100 min-h-screen overflow-x-hidden antialiased">
-      <canvas id="confetti-canvas" className="fixed top-0 left-0 w-screen h-screen -z-50 pointer-events-none"></canvas>
+    <div className="relative bg-yellow-100 min-h-screen overflow-x-hidden antialiased">
+      <canvas id="confetti-canvas" className="fixed top-0 left-0 w-screen h-screen z-0 pointer-events-none"></canvas>
+      <div className="relative z-10">
+      <section className="relative">
       <Header />
+      <Hero />
+      </section>
       <main>
-        <Hero />
         <About />
+        <FaFileAlt aria-hidden="true" style={{ width: '24px', height: '24px', flexShrink: 0, color: '#f3f3f3', display: 'block' }} />
         <Skills />
         <Projects />
       </main>
+      <Footer />
+      </div>
+      <a href="/assests/resume.pdf" target="_blank" rel="noreferrer" className="fixed bottom-6 right-6 z-50 flex items-center gap-2 bg-blue-500 text-white px-4 py-3 rounded-lg shadow-lg hover:bg-blue-600 transition duration-300">
+        <span className="font-semibold">Resume</span>
+      </a>
     </div>
   )
 }
